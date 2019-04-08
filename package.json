@@ -1,0 +1,14 @@
+{
+	"name": "car-racers",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=6.0.0"
+	},
+	"scripts": {
+		"start": "http-server app/ -o -a 0.0.0.0 -p 8080"
+	},
+	"dependencies": {
+		"http-server": "^0.9.0"
+	},
+	"devDependencies": {}
+}

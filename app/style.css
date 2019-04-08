@@ -1,0 +1,225 @@
+body {
+	font-family: 'Rubik', sans-serif;
+}
+
+#container {
+	position: relative;
+	height: 500px;
+	background: #FFDAAC;
+	overflow: hidden;
+}
+
+.dashboard {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	font-size: 16px;
+}
+
+.btn-start {
+	display: none;
+}
+
+.btn-start, .btn-start-new {
+	padding: 10px 15px;
+	font-size: 16px;
+	background: red;
+	color: #fff;
+	text-align: center;
+	width: 135px;
+	margin: 20px auto 0;
+}
+
+.btn-start:hover, .btn-start-new:hover {
+	cursor: pointer;
+}
+
+.road-map-container{
+	height: 500px;
+	width: 50px;
+	background: #ccc;
+	float: left;
+	position: relative;
+	border-top: 2px solid white;
+	border-left: 24px solid black;
+	border-right: 24px solid black;
+
+}
+
+.road-map {
+	height: 450px;
+	width: 50px;
+	background: #ccc;
+	position: absolute;
+	bottom: 0;
+	border-right: 24px solid black;
+}
+
+.road {
+	position: absolute;
+	height: 65px;
+	width: 300px;
+	top: 0;
+	left: 200px;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.game-over {
+	position: absolute;
+	height: 110px;
+	width: 260px;
+	top: 35%;
+	left: 250px;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+	background: black;
+	font-size: 48px;
+	text-transform: uppercase;
+	z-index: 101;
+}
+
+.finish {
+	position: absolute;
+	height: 60px;
+	width: 300px;
+	top: 0;
+	left: 200px;
+	background-image: url('img/finish.svg');
+	background-size: cover;
+	background-position: center;
+}
+
+.final-dashboard {
+	text-align: center;
+	padding-top: 40px;
+	color: #000000;
+	font-size: 40px;
+}
+
+.road.simple {
+	background-image: url('img/road.svg');
+	background-position: center;
+	background-size: cover;
+}
+
+.player-car, .road-map-car {
+	position: absolute;
+	border-radius: 5px;
+	background-image: url(img/player-car.svg);
+	background-size: cover;
+	z-index: 100;
+	transition: 2s cubic-bezier(.2,.71,.61,.81) top;
+}
+
+.road-map-car {
+	height: 50px;
+	width: 28px;
+	left: 10px;
+	bottom: 0;
+}
+
+.player-car {
+	bottom: 60px;
+	left: 250px;
+	height: 80px;
+	width: 40px;
+}
+
+.on-speed:after {
+	content: "";
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	top: 100%;
+	right: 11px;
+	border-radius: 5px;
+	background-image: url(img/car-on-speed.png);
+	transform: rotate(180deg);
+	background-size: cover;
+	background-position: center;
+}
+
+.bad-car {
+	position: absolute;
+	height: 80px;
+	width: 40px;
+	bottom: 0;
+	left: 0;
+	border-radius: 5px;
+	background-size: cover;
+	z-index: 99;
+	text-align: center;
+}
+
+.speed-bonus {
+	position: absolute;
+	height: 60px;
+	width: 40px;
+	bottom: 0;
+	left: 0;
+	background-image: url(img/speed.png);
+	background-size: cover;
+	background-position: center;
+	z-index: 99;
+}
+
+.on-slow, .on-slow-2 {
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	z-index: 100;
+	width: 76px;
+	height: 30px;
+}
+
+.on-slow-2 {
+	background-image: url('img/on-speed-2.svg');
+}
+
+.on-slow {
+	background-image: url('img/on-speed-1.svg');
+}
+
+.pit {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	bottom: 0;
+	left: 0;
+	background-image: url(img/pit.png);
+	background-size: cover;
+	background-position: center;
+	z-index: 98;
+}
+
+.car-crash {
+	position: absolute;
+	height: 55px;
+	width: 70px;
+	bottom: 0;
+	background-image: url(img/car-crash.png);
+	background-size: cover;
+	background-position: center;
+	z-index: 101;
+}
+
+.fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
